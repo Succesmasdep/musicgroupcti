@@ -17,10 +17,9 @@ def subcribe(func):
                 await app.get_chat_member(MUST_JOIN, message.from_user.id)
             except UserNotParticipant:
                 if MUST_JOIN.isalpha():
-                    link = "https://t.me/" + MUST_JOIN
+                    link = f'https://t.me/{MUST_JOIN}'
                 else:
-                    chat_info = await app.get_chat(MUST_JOIN)
-                    chat_info.invite_link
+                    link = (await app.get_chat(MUST_JOIN)).invite_link
                 try:
                     await message.reply(
                         f"**Hallo {rpk}. ᴍᴀ'ᴀꜰ ᴀɴᴅᴀ ʙᴇʟᴜᴍ ʙᴇʀɢᴀʙᴜɴɢ ᴅɪ ᴄʜᴀɴɴᴇʟ ᴀᴛᴀᴜ ɢʀᴏᴜᴘ ᴋᴀᴍɪ ꜱɪʟᴀʜᴋᴀɴ ᴊᴏɪɴ ᴅᴜʟᴜ ᴋᴀᴋ ᴀɢᴀʀ ʙɪꜱᴀ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ʙᴏᴛ ɪɴɪ, ᴋᴀᴍɪ ᴍᴇʟᴀᴋᴜᴋᴀɴ ɪɴɪ ᴜɴᴛᴜᴋ ᴍᴇɴɢʜɪɴᴅᴀʀɪ ʙᴇʀʟᴇʙɪʜᴀɴɴʏᴀ ᴘᴇᴍᴀᴋᴀɪᴀɴ ʙᴏᴛ ᴅᴀɴ ꜱᴇᴋᴀʟɪɢᴜꜱ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴀʀᴀʜᴋᴀɴ ᴋᴀᴋᴀᴋ ʙᴀɢᴀɪᴍᴀɴᴀ ᴄᴀʀᴀ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ʙᴏᴛ ɪɴɪ, ᴋᴀᴋᴀᴋ ᴄᴜᴋᴜᴘ ʙᴀᴄᴀ ꜱᴀᴊᴀ ᴛᴜᴛᴏʀɪᴀʟ ᴅɪ ᴄʜᴀɴɴᴇʟ ᴀᴛᴀᴜ ɢʀᴏᴜᴘ ᴋᴀᴍɪ. ꜱɪʟᴀʜᴋᴀɴ ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴅɪ ʙᴀᴡᴀʜ.**",
